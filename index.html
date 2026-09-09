@@ -1,78 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cominify — simple browser-based file size reduction.">
-  <title>Cominify — Reduce file size</title>
-  <link rel="icon" href="logo.png">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Cominify — smart, private file size reduction in your browser.">
+<title>Cominify — Make files smaller</title><link rel="icon" href="logo.png"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <a class="brand" href="#" aria-label="Cominify home">
-      <img src="logo.png" alt="Cominify logo">
-    </a>
-    <div class="header-actions">
-      <span class="privacy-pill">Files stay in your browser</span>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="eyebrow">FAST · PRIVATE · SIMPLE</div>
-      <h1>Make your files<br><span>smaller.</span></h1>
-      <p class="hero-text">
-        Upload a PDF, DOCX or Pages file and Cominify will try to reduce its size
-        directly in your browser.
-      </p>
-
-      <div class="drop-zone" id="dropZone">
-        <input id="fileInput" type="file" accept=".pdf,.docx,.pages" hidden>
-        <div class="upload-icon">↓</div>
-        <h2>Drop your file here</h2>
-        <p>or</p>
-        <button class="choose-btn" id="chooseBtn" type="button">Choose file</button>
-        <small>PDF · DOCX · PAGES · up to 50 MB</small>
-      </div>
-
-      <div class="status-card hidden" id="statusCard">
-        <div class="status-top">
-          <div>
-            <span class="status-label">Selected file</span>
-            <strong id="fileName">—</strong>
-          </div>
-          <span class="status-label" id="statusText">Preparing…</span>
-        </div>
-        <div class="progress-track">
-          <div class="progress-bar" id="progressBar"></div>
-        </div>
-      </div>
-
-      <div class="result-card hidden" id="resultCard">
-        <div class="result-icon">✓</div>
-        <div class="result-content">
-          <span class="status-label">Result</span>
-          <h3 id="resultTitle">Your file is ready</h3>
-          <p id="resultDetails">—</p>
-        </div>
-        <button class="download-btn" id="downloadBtn" type="button">Download</button>
-      </div>
-
-      <div class="notice" id="notice">
-        <span>●</span>
-        <p>Cominify processes files locally in your browser. Your files are not uploaded to a server.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span>© 2026 Cominify</span>
-    <span>Smaller files. Simpler sharing.</span>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<header class="header"><a class="brand" href="#" aria-label="Cominify"><img src="logo.png" alt="Cominify"></a><div class="header-right"><span class="privacy-pill">100% local processing</span></div></header>
+<main><section class="hero">
+<div class="eyebrow">SMART · PRIVATE · MAXIMUM</div><h1>Make your files<br><span>smaller.</span></h1>
+<p class="hero-text">Cominify removes unnecessary package data, rebuilds documents efficiently and recompresses embedded images while keeping the content readable.</p>
+<section class="settings-card"><div class="settings-title"><div><span class="settings-label">Compression</span><strong>Maximum size reduction</strong></div><span class="mode-badge">MAX</span></div>
+<label class="setting-row"><input id="visualPdf" type="checkbox" checked><span class="checkmark"></span><span><b>Maximum PDF optimization</b><small>Allows a visual PDF rebuild when it produces a much smaller file. Text remains readable, but selectable text/forms may not be preserved.</small></span></label>
+<label class="setting-row"><input id="recompressImages" type="checkbox" checked><span class="checkmark"></span><span><b>Recompress embedded photos</b><small>Reduces resolution only when an image is unnecessarily large and keeps the sharper version if compression is not beneficial.</small></span></label></section>
+<div class="drop-zone" id="dropZone"><input id="fileInput" type="file" accept=".pdf,.docx,.pages" hidden><div class="upload-icon">↓</div><h2>Drop your file here</h2><p>or</p><button class="choose-btn" id="chooseBtn" type="button">Choose file</button><small>PDF · DOCX · PAGES · up to 100 MB</small></div>
+<div class="status-card hidden" id="statusCard"><div class="status-top"><div><span class="status-label">Processing</span><strong id="fileName">—</strong></div><span class="status-label" id="statusText">Preparing…</span></div><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div></div>
+<div class="result-card hidden" id="resultCard"><div class="result-icon">✓</div><div class="result-content"><span class="status-label">Result</span><h3 id="resultTitle">Your file is ready</h3><p id="resultDetails">—</p></div><button class="download-btn" id="downloadBtn" type="button">Download</button></div>
+<div class="notice"><span>●</span><p>Your files are processed locally in the browser. Cominify does not upload them to a server.</p></div>
+</section></main><footer><span>© 2026 Cominify</span><span>Smaller files. Same content.</span></footer>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body></html>

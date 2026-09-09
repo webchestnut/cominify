@@ -1,0 +1,5 @@
+Cominify maximum compression edition
+- safe + visual PDF candidates
+- embedded JPEG/PNG image optimization for DOCX
+- DEFLATE level 9 package rebuild
+- maximum compression settings in UI
